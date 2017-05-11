@@ -1,15 +1,14 @@
 <template>
   <div class="list-header">
     <div class="header-icon" @click="showBar"><i class="iconfont">&#xe612</i></div>
-    <div v-if="!tip" class="header-cont"><p>{{title}}</p></div>
-    <div v-if="tip" class="header-cont"><p>{{tip | dateTime}}</p></div>
-    <div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe610</i></div>
-    <div class="header-icon" v-show="iconDisplay" @click="changeMode"><i class="iconfont">&#xe619</i></div>
+    <div v-if="!tip" class="header-cont"><p>测试</p></div>
+    <!--<div v-if="tip" class="header-cont"><p>11111</p></div>-->
+    <!--<div class="header-icon" v-show="iconDisplay" ><i class="iconfont">&#xe610</i></div>-->
+    <!--<div class="header-icon" v-show="iconDisplay" @click="changeMode"><i class="iconfont">&#xe619</i></div>-->
   </div>
 </template>
 
 <script>
-  /*eslint-disable no-new*/
   export default{
     props: ['showSidebar', 'title', 'iconDisplay', 'tip'],
     data () {
@@ -24,8 +23,7 @@
       showBar () {
         window.document.body.className = 'scroll-stop'
         window.document.querySelector('html').className = 'scroll-stop'
-//      window.document.body.style.overflow = 'hidden'
-//      window.document.querySelector('html').style.overflow = 'hidden'
+
         this.showSidebar = !this.showSidebar
       },
       changeMode () {

@@ -33,7 +33,41 @@
 </template>
 
 <script>
-
+  /*eslint-disable no-new*/
+  import ajax from '../ajax'
+  export default{
+    props: ['showSidebar', 'tip'],
+    data () {
+      return {
+        list: []
+      }
+    },
+    ready () {
+      this.getList()
+    },
+    methods: {
+      getList () {
+        let _this = this
+        ajax({
+//          url: 'http://news-at.zhihu.com/api/4/themes',
+          url: 'http://api.yatessss.com:8888/news-at/api/4/themes',
+          method: 'GET',
+          callback: function (res) {
+            _this.$set('list', res.others)
+//            console.log(_this.list)
+          }
+        })
+      },
+      hiddenBar () {
+        window.document.body.className = ''
+        window.document.querySelector('html').className = ''
+//        document.body.style.overflow = 'initial'
+//        window.document.querySelector('html').style.overflow = 'initial'
+        this.showSidebar = !this.showSidebar
+        this.tip = null
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss" rel="stylesheet/scss">
