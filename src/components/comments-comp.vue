@@ -1,30 +1,31 @@
 <!--评论列表单元-->
 <template>
-  <li class="comment-li">
-    <div class="img-box">
-      <img :src="item.avatar | replaceUrl" alt="">
-    </div>
-    <div class="comment-content">
-      <div class="content-header">
-        <div class="author">
-          {{item.author}}
-        </div>
-        <div class="likes">
-          <i class="iconfont">&#xe611</i> {{item.likes}}
-        </div>
-      </div>
-      <div class="content-main">
-        <p>{{item.content}}</p>
-        <p class="reply" v-if="item.reply_to">
-          //{{item.reply_to.author}}:
-          <span> {{item.reply_to.content}}</span>
-        </p>
-      </div>
-      <div class="content-time">
-        {{item.time | formatTime "MM-dd hh:mm"}}
-      </div>
-    </div>
-  </li>
+  <!--<li class="comment-li">-->
+    <!--<div class="img-box">-->
+      <!--<img :src="item.avatar | replaceUrl" alt="">-->
+    <!--</div>-->
+    <!--<div class="comment-content">-->
+      <!--<div class="content-header">-->
+        <!--<div class="author">-->
+          <!--{{item.author}}-->
+        <!--</div>-->
+        <!--<div class="likes">-->
+          <!--<i class="iconfont">&#xe611</i> {{item.likes}}-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="content-main">-->
+        <!--<p>{{item.content}}</p>-->
+        <!--<p class="reply" v-if="item.reply_to">-->
+          <!--//{{item.reply_to.author}}:-->
+          <!--<span> {{item.reply_to.content}}</span>-->
+        <!--</p>-->
+      <!--</div>-->
+      <!--<div class="content-time">-->
+        <!--{{item.time | formatTime "MM-dd hh:mm"}}-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</li>-->
+  <div>679830-=</div>
 </template>
 
 <script>

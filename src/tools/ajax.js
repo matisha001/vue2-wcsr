@@ -1,8 +1,6 @@
-/**
- * Created by yatessss on 16/6/22.
- */
 import Vue from 'vue'
-
+import VueResource from 'vue-resource'
+Vue.use(VueResource)
 module.exports = (params) => {
   Vue.http.options.headers = {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8;'

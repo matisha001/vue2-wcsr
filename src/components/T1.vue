@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="photo">
-      <img src="http://7xqch8.com1.z0.glb.clouddn.com/4.pic_hd.jpg" alt="">
+
       <p>test1</p>
     </div>
       <p>
