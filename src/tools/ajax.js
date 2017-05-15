@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
-module.exports = (params) => {
+export default (params) => {
   Vue.http.options.headers = {
     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8;'
   }
@@ -9,8 +9,7 @@ module.exports = (params) => {
   //   withCredentials: true
   // }
   Vue.http.options.emulateJSON = true
-  Vue
-    .http({
+  Vue.http({
       url: params.url,
       method: params.method,
       data: params.data || {}
