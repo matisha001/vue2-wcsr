@@ -29,7 +29,6 @@
 
 <script>
   import loanList from '@/components/loan-list'
-  /*eslint-disable no-new*/
   export default{
     components: {
       loanList

@@ -1,4 +1,3 @@
-<!--产品详情的组件列表-->
 <template>
   <div>
     <div class="pro-name">

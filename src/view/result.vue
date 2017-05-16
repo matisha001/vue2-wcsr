@@ -16,7 +16,6 @@
 </template>
 
 <script>
-  /*eslint-disable no-new*/
   export default{
     components: {
 
