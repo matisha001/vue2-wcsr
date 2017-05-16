@@ -2,12 +2,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 Vue.use(Router)
-
-// import header from '@/components/header'
-import t1 from '@/components/T1'
 import result from '@/view/result'
 import list from '@/view/list.vue'
 import pro from '@/view/pro-detail'
+import index from '@/view/index'
 import loan from '@/view/loan-detail'
 import fill from '@/view/fill-amount'
 // import comments from '@/view/comments.vue'
@@ -22,12 +20,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
-      component: list
+      name: 'index',
+      component: index
     },
     {
       path: '/pro',
-      name: 't1',
+      name: 'pro',
       component: pro
     },
     {
@@ -46,7 +44,7 @@ export default new Router({
       component: fill
     },
     { path: '/user/:id', component: list },
-    { path: '/user/:id', component: t1,
+    { path: '/user/:id', component: list,
       children: [
         {
           // 当 /user/:id/profile 匹配成功，
@@ -58,7 +56,7 @@ export default new Router({
           // 当 /user/:id/posts 匹配成功
           // UserPosts 会被渲染在 User 的 <router-view> 中
           path: 'posts',
-          component: t1
+          component: list
         }
       ]
     }

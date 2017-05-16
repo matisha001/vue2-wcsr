@@ -7,7 +7,7 @@ import Vue from 'vue'
 import filters from '@/tools/filters'
 Object.keys(filters).forEach((k) => Vue.filter(k, filters[k]))
 
-import ajax from '@/tools/ajax'
+// import ajax from '@/tools/ajax'
 // import App from '@/view/App'
 import router from '@/router'
 
@@ -43,15 +43,3 @@ new Vue({
 //     // error callback
 // })
 // ajax().then((message) => { console.log(message)}).catch((message) => {});
-
-
- ajax({"requestType":"5041","arguments":{"activityType":"2"}})
- .then((data) => {
- console.log(data)
- })
- .catch((message) => {
-
- })
-
-
-
